@@ -1,6 +1,6 @@
 
 # Esercizi risolti con LEFT JOIN
-###Crediti esercizi: https://codegrind.it/esercizi/sql
+### Crediti esercizi: https://codegrind.it/esercizi/sql 
 ### 1. Ottieni tutti gli impiegati e i rispettivi dipartimenti in cui lavorano, inclusi gli impiegati senza dipartimento.
 
 ```sql
