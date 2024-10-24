@@ -3,7 +3,7 @@
 
 Welcome to the **SQL Exercises and Documentation** repository!
 
-This repository is dedicated to providing examples, exercises, and documentation related to SQL (Structured Query Language). It is a resource aimed at helping developers, students, and data enthusiasts learn, practice, and improve their SQL skills.
+This repository is dedicated to offering examples, exercises, and documentation on SQL (Structured Query Language). It serves as a personal resource aimed at enhancing skills and knowledge in the field of SQL, helping both personal growth and development in database management.
 
 ## Repository Structure
 
