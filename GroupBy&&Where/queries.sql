@@ -18,6 +18,8 @@ CREATE TABLE Orders (
     FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
 
+
+
 -- Insert sample data
 INSERT INTO Users (user_id, username, age) VALUES
 (1, 'francesco', 35),

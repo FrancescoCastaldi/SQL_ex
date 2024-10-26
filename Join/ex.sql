@@ -79,3 +79,65 @@ sale_id | product_name
 2       | Product 2
 
 -- Comment: The RIGHT JOIN keyword returns all records from the right table (products)
+
+----------------------------------------------------------------------------------------
+
+-- Write a solution to find all dates' id with higher temperatures compared to its previous dates (yesterday)
+
+
+select today.id
+from Weather yesterday
+cross join Weather today
+
+    where DATEDIFF(today.recordDate, yesterday.recordDate)=1 AND today.temperature > yesterday.temperature
+
+
+
+
+--Input
+Weather =
+| id | recordDate | temperature |
+| -- | ---------- | ----------- |
+| 1  | 2015-01-01 | 10          |
+| 2  | 2015-01-02 | 25          |
+| 3  | 2015-01-03 | 20          |
+| 4  | 2015-01-04 | 30          |
+
+--Output
+| id |
+| -- |
+| 2  |
+| 4  |
+
+--Comment: For 2015-01-02, the temperature is higher than 2015-01-01. For 2015-01-04, the temperature is higher than 2015-01-03.
+
+----------------------------------------------------------------------------------------
+Write a solution to find managers with at least five direct reports.
+
+Return the result table in any order.
+
+select m.name
+from Employee as e
+inner join employee as m
+on e.managerId=m.id
+group by e.managerId
+having count(e.id)>=5
+
+-- Input: 
+Employee table:
++-----+-------+------------+-----------+
+| id  | name  | department | managerId |
++-----+-------+------------+-----------+
+| 101 | John  | A          | null      |
+| 102 | Dan   | A          | 101       |
+| 103 | James | A          | 101       |
+| 104 | Amy   | A          | 101       |
+| 105 | Anne  | A          | 101       |
+| 106 | Ron   | B          | 101       |
++-----+-------+------------+-----------+
+-- Output: 
++------+
+| name |
++------+
+| John |
++------+
