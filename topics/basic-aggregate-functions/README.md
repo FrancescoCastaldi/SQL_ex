@@ -1,8 +1,6 @@
-
 # Basic Aggregate Functions in SQL
 
-SQL aggregate functions allow you to perform calculations and summarize data in a structured way.
-Below are some of the essential aggregate functions along with operators often used in SQL queries.
+SQL aggregate functions allow you to perform calculations and summarise data in a structured way. Below are some of the essential aggregate functions along with operators often used in SQL queries.
 
 ---
 
@@ -35,50 +33,54 @@ Below are some of the essential aggregate functions along with operators often u
 ### 1. COUNT()
 The `COUNT()` function returns the number of rows that match a specified condition.
 
-#### Example:
 ```sql
-SELECT COUNT(*) FROM Employees WHERE department = 'Sales';
+SELECT COUNT(*)
+FROM Employees
+WHERE department = 'Sales';
 ```
 
 ### 2. SUM()
-The `SUM()` function calculates the sum of a numeric column.
+Calculates the sum of a numeric column.
 
-#### Example:
 ```sql
-SELECT SUM(salary) FROM Employees WHERE department = 'Sales';
+SELECT SUM(salary)
+FROM Employees
+WHERE department = 'Sales';
 ```
 
 ### 3. AVG()
-The `AVG()` function calculates the average value of a numeric column.
+Calculates the average value of a numeric column.
 
-#### Example:
 ```sql
-SELECT AVG(salary) FROM Employees WHERE department = 'Sales';
+SELECT AVG(salary)
+FROM Employees
+WHERE department = 'Sales';
 ```
 
 ### 4. MIN()
-The `MIN()` function retrieves the minimum value of a column.
+Retrieves the minimum value of a column.
 
-#### Example:
 ```sql
-SELECT MIN(salary) FROM Employees;
+SELECT MIN(salary)
+FROM Employees;
 ```
 
 ### 5. MAX()
-The `MAX()` function retrieves the maximum value of a column.
+Retrieves the maximum value of a column.
 
-#### Example:
 ```sql
-SELECT MAX(salary) FROM Employees;
+SELECT MAX(salary)
+FROM Employees;
 ```
 
 ### Combining Conditions with `WHERE`
 You can combine conditions using SQL operators in the `WHERE` clause:
 
 ```sql
-SELECT department, COUNT(*) FROM Employees
+SELECT department, COUNT(*)
+FROM Employees
 WHERE department <> 'HR' AND salary >= 50000
 GROUP BY department;
 ```
 
-These functions and operators allow powerful and efficient data manipulation in SQL.
+These functions and operators allow powerful and efficient data manipulation in SQL. Explore `exercises.sql` for guided practice and compare your work with the reference queries in `solutions.sql`.
